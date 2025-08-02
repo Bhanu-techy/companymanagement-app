@@ -1,116 +1,80 @@
-Write the objective of the assignment yourself
+# NirogGyan Frontend Assignment Reference Document
 
-### Refer to the image below:
+---
 
-Add UI reference image yourself
+### Assignment Objective
 
-<div style="text-align: center;">
-     <!-- <img src="remove this text and add the image URL" alt="ui"> -->
-</div>
-<br/>
+Your main goal is to create a user-friendly and responsive web application for booking healthcare appointments. This involves displaying doctor information, showing their availability, and allowing users to schedule appointments through a simple interface.
 
-### Design Files
+---
 
-<details>
-<summary>Add Route Name</summary>
-<br/>
-Add the design files according to the route (if any) and responsiveness
+### Assignment Overview
 
-<!-- - [Extra Small (Size < 576px) and Small (Size >= 576px)](remove this text and add the image URL here)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](remove this text and add the image URL here) -->
+You'll be building a **responsive web application** primarily using **React.js**. While **TypeScript is preferred** for its type safety and improved developer experience, you can use JavaScript if you're not yet comfortable with TypeScript. The user interface should be **clean, intuitive, and functional**.
 
-</details>
+For the backend, you have flexibility:
 
-### Set Up Instructions
+- **Mock Backend:** You can use static JSON data to simulate API responses. This is a good option if you want to focus primarily on the frontend.
+- **Node.js/Express:** If you're comfortable with backend development, you can create a simple Node.js/Express API to serve your data.
 
-<details>
-<summary>Click to view</summary>
+---
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
 
-</details>
+### Bonus (Optional Enhancements)
 
-### Assignment Completion Instructions
+Consider implementing these features if you have extra time and want to challenge yourself further. These will significantly enhance your application's quality and demonstrate additional skills.
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+- **Styling Framework:** Utilize a CSS framework like **Tailwind CSS** (recommended) or another framework of your choice (e.g., Bootstrap, Material-UI) for efficient and consistent styling.
+- **Node.js Express API:** Build a simple backend using **Node.js with Express** to manage doctor data and appointments dynamically.
+- **Form Validation:** Implement client-side validation for the appointment booking form to ensure data integrity and a better user experience.
+- **Responsive Design:** Ensure your application looks and functions well across various screen sizes (mobile, tablet, desktop).
 
-The app must have the following functionalities:
+---
 
-- Add all the functionalities to be achieved(according to the route, if any) yourself
+### Technical Constraints
 
-</details>
+Adhering to these constraints will help you build a modern and maintainable React application.
 
-### Assignment Completion Checklist
+- **React:** Use React for your frontend. You can choose to use it with or without Next.js.
+- **TypeScript:** While not strictly mandatory, **TypeScript is strongly preferred** for its benefits in larger applications and team environments.
+- **Functional Components & Hooks:** Leverage React's functional components and hooks (e.g., `useState`, `useEffect`, `useContext`) for state management and side effects.
+- **State Management:** Use **React Context API** or **local component state** for managing your application's data. Avoid external state management libraries like Redux for this assignment unless you are very comfortable with them.
 
-<details>
-<summary>Click to view</summary>
+# Set Up Instructions
+Download dependencies by running npm install
 
-- **Along with the below points, add your checklist specific to the assignment**
+Start up the app using npm start
 
-- Read the instructions given in the assignment carefully and list down the **Assignment Completion Checklist** for the assignment and start working on it
-- The completion Checklist includes the below-mentioned points
-  - I have completed all the functionalities asked in the assignment
-  - I have used only the resources (Frameworks, Design files, APIs, third-party packages) mentioned in the assignment
-  - I have modified the README.md file based on my assignment instructions
-  - I have completed the assignment **ON TIME**
-- **Note:**
-  - Ensure that you have marked all the checklist points in your completion checklist before submitting the assignment
-  </details>
+#Routes
+Home Route
+Home Route contains a Header which consists a SearchBar
+Doctors List
+Doctor List images should consist of alt attribute value as doctor name
 
-### Quick Tips
+The Profile image should consist of alt attribute value as user profile
 
-<details>
-<summary>Click to view</summary>
-<br>
+1. **Landing Page:**
+    - Display a clear list of doctors.
+    - For each doctor, show their **name, specialization, and a profile image**.
+    - Indicate their **availability status** (e.g., "Available Today," "Fully Booked," "On Leave").
+    - Implement a **search functionality** to filter doctors by name or specialization.
+2. **Doctor Profile Page:**
+    - When a user clicks on a doctor from the landing page, navigate to a dedicated profile page.
+    - This page should display more detailed information about the doctor.
+    - Clearly show their **availability schedule**.
+    - Include a prominent **"Book Appointment" button**.
+3. **Book Appointment:**
+    - Clicking the "Book Appointment" button should lead to a simple form.
+    - The form needs to collect: **Patient Name, Email, and desired Date/Time for the appointment.**
+    - Upon submission, provide a **confirmation message** to the user.
 
-- Add third-party packages list yourself
-</details>
 
-### Important Note
 
-<details>
-<summary>Click to view</summary>
-<br/>
+#libraries used
+=> React-icons for icon
+=> react-router-dom for navigation
+=> React-popup for popup form
+=> React hooks for function components
 
-- Add any important note here, like user credentials for authentication.
-
-</details>
-
-### Resources
-
-<details>
-<summary>Data Fetch URLs</summary>
-<br/>
-
-- Add the URLs list to fetch the data yourself
-
-</details>
-
-<details>
-<summary>Image URLs</summary>
-<br/>
-
-- Add the list of all image URLs needed in the assignment yourself.
-
-</details>
-
-<details>
-<summary>Colors</summary>
-<br/>
-
-Add the text and background colours to be used in the assignment yourself.
-
-<!-- <div style="background-color: #3b82f6; width: 150px; padding: 10px; color: white">Hex: #3b82f6</div> -->
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Add the font-families to be used in the assignment yourself.
-
-</details>
-# D
+#Resoureces
+   Didn't created Backend API with node.js, insted used data which is placed in seperate .js file# DoctorAppointment-app
