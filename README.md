@@ -78,3 +78,4 @@ The Profile image should consist of alt attribute value as user profile
 
 #Resoureces
    Didn't created Backend API with node.js, insted used data which is placed in seperate .js file# DoctorAppointment-app
+# DoctorAppointment-app
