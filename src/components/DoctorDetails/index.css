@@ -1,0 +1,131 @@
+h1 {
+  color: black;
+  font-family: roboto;
+}
+.doctor-detail-img-cont {
+  width: 40vw;
+  text-align: center;
+  margin: 10px;
+}
+.doctor-detail-view-container {
+  display: flex;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(155, 232, 232);
+}
+.doctor-detail-img {
+  width: 400px;
+  height: 500px;
+}
+.doctor-detail-description {
+  width: 55vw;
+  font-family: roboto;
+  padding: 10px;
+}
+.doctor-name {
+  font-size: 27px;
+  font-family: roboto;
+}
+.doctor-description {
+  font-family: sans-serif;
+}
+.status {
+  font-size: 20px;
+}
+.status-value {
+  font-weight: bold;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+}
+.form {
+  width: 500px;
+  padding: 50px;
+}
+.popup-container {
+  width: 400px;
+}
+.form-head {
+  font-size: 20px;
+}
+input {
+  margin: 5px;
+  height: 25px;
+}
+.book-btn {
+  border: none;
+  background-color: rgb(76, 76, 220);
+  color: #ffffff;
+  border-radius: 5px;
+  height: 32px;
+  width: 180px;
+  font-family: roboto;
+}
+.submit-btn {
+  align-self: center;
+  border: none;
+  background-color: rgb(76, 76, 220);
+  color: #ffffff;
+  border-radius: 5px;
+  height: 32px;
+  width: 120px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.errormsg {
+  color: red;
+  margin-left: 20px;
+  font-size: 12px;
+}
+.submition-success-view {
+  height: 400px;
+  display: flex;
+  background-color: rgb(124, 236, 137);
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: roboto;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .submition-success-view {
+    height: 200px;
+    text-align: center;
+  }
+  .doctor-detail-view-container {
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+  }
+  .doctor-detail-description {
+    width: 100vw;
+    padding: 10px;
+    height: 60vh;
+  }
+  .form {
+    width: 400px;
+    padding: 0px;
+  }
+  .popup-container {
+    width: 400px;
+  }
+  .form-head {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+  }
+  .datetime-input {
+    width: 170px;
+  }
+  .doctor-detail-img {
+    width: 300px;
+    height: 350px;
+  }
+}
