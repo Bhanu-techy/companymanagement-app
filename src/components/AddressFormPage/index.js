@@ -6,15 +6,15 @@ const AddressFormPage = props => {
     onChangeAddress,
     onChangeState,
     onChangeCity,
-    onChangePinCode,
+    onChangePincode,
     onAddDetails,
   } = props
 
-  const {address, city, state, pinCode} = details
+  const {address, city, state, pincode} = details
 
   return (
     <div className="form-container">
-      <form submit={onAddDetails}>
+      <form onSubmit={onAddDetails}>
         <h1 className="form-heading">Add Details</h1>
         <div className="input-div">
           <label htmlFor="address">Enter Address</label>
@@ -43,8 +43,8 @@ const AddressFormPage = props => {
           <input
             type="text"
             id="pincode"
-            onChange={onChangePinCode}
-            value={pinCode}
+            onChange={onChangePincode}
+            value={pincode}
           />
         </div>
         <button type="submit" className="add-btn">

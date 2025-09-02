@@ -13,7 +13,7 @@ const CustomerFormPage = props => {
   const {firstName, lastName, phone} = details
   return (
     <div className="form-container">
-      <form>
+      <form onSubmit={onAddDetails}>
         <h1 className="form-heading">Add Details</h1>
         <div className="input-div">
           <label htmlFor="first_name">Enter First Name</label>
@@ -42,7 +42,7 @@ const CustomerFormPage = props => {
             value={phone}
           />
         </div>
-        <button type="submit" onClick={onAddDetails} className="add-btn">
+        <button type="submit" className="add-btn">
           Add
         </button>
       </form>
