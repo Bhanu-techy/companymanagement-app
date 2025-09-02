@@ -31,12 +31,12 @@ const Home = () => {
   }
 
   const onClickSearch = () => {
-    getCustomerList()
+    getCustomerList();
   }
 
   useEffect(() => {
-    getCustomerList()
-  }, [])
+    getCustomerList();
+  }, [city])
 
   return (
     <div className="home-bg-container">

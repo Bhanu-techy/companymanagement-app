@@ -8,7 +8,7 @@ const CustomerDetails = () => {
   const [details, setDetails] = useState({})
   const [addresses, setAddresses] = useState([])
   const {id} = useParams()
-
+  
   useEffect(() => {
     const geturl = `https://courageous-wonder-production.up.railway.app/api/customers/${id}/addresses`
     axios
@@ -52,6 +52,7 @@ const CustomerDetails = () => {
   })
 
   const {firstName, lastName, phoneNumber} = details
+
   return (
     <div className="customer-detail-cont">
       <div className="customer-detail">
@@ -74,7 +75,12 @@ const CustomerDetails = () => {
         {addresses.length > 0 ? (
           <h1 className="heading">Addresses</h1>
         ) : (
-          <h1 className="heading">No Addresses</h1>
+          <>
+            <h1 className="heading">No Addresses</h1>
+            <Link to={`/api/customer/{id}/address`}>
+              <button type="button">Add</button>
+            </Link>
+          </>
         )}
         {addresses.map(each => (
           <li key={each.id}>
@@ -82,8 +88,8 @@ const CustomerDetails = () => {
             <p>{each.city}</p>
             <p>{each.state}</p>
             <p>{each.pinCode}</p>
-            <Link to="/api/customer/form/">
-              <button type="button">Edit</button>
+            <Link to={`/api/customer/{id}/address`}>
+              <button type="button">Add</button>
             </Link>
           </li>
         ))}
