@@ -6,10 +6,16 @@ import './index.css'
 
 const Home = () => {
   const [customers, setCustomers] = useState([])
+  const [city, setCity] = useState('')
 
-  useEffect(() => {
+  const onChangeCity = event => {
+    setCity(event.target.value)
+  }
+
+  const getCustomerList = () => {
+    const url = `https://courageous-wonder-production.up.railway.app/api/customers/?city=${city}`
     axios
-      .get('https://apibackend-production-a519.up.railway.app/api/customers/')
+      .get(url)
       .then(response => {
         const data = response.data.map(each => ({
           id: each.id,
@@ -22,19 +28,34 @@ const Home = () => {
       .catch(error => {
         console.error('There was an error fetching the customers!', error)
       })
+  }
+
+  const onClickSearch = () => {
+    getCustomerList()
+  }
+
+  useEffect(() => {
+    getCustomerList()
   }, [])
-  console.log(customers)
 
   return (
-    <div>
+    <div className="home-bg-container">
+      <nav>
+        <Link to="/api/customer/form">
+          <button type="button" className="add-cust">
+            Add Customer
+          </button>
+        </Link>
+        <div>
+          <input type="search" onChange={onChangeCity} />
+          <button type="button" onClick={onClickSearch}>
+            search
+          </button>
+        </div>
+      </nav>
       <div className="home-container">
         <div className="head-container">
           <h1 className="heading">Customer List</h1>
-          <Link to="/add/customer/form">
-            <button type="button" className="add-cust">
-              Add Customer
-            </button>
-          </Link>
         </div>
         <ul>
           {customers.map(customer => (
