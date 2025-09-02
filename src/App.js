@@ -1,6 +1,7 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Home from './components/Home'
-import DoctorDetails from './components/DoctorDetails'
+import CustomerDetails from './components/CustomerDetails'
+import CustomerForm from './components/CustomerForm'
 
 import './App.css'
 
@@ -8,7 +9,8 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/doctor/:id" component={DoctorDetails} />
+      <Route exact path="/customer/:id" component={CustomerDetails} />
+      <Route exact path="/add/customer/form" component={CustomerForm} />
     </Switch>
   </BrowserRouter>
 )

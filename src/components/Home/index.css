@@ -3,15 +3,38 @@
   padding: 10px;
   width: 100vw;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
 }
 .ullist {
   width: 100vw;
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+
   gap: 0px;
   padding: 0px;
   margin: 0px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-family: roboto;
+  margin: 5px;
+}
+p {
+  color: black;
+}
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vh;
+}
+.add-cust {
+  font-size: 20px;
+  border: none;
+  color: #000000;
 }
